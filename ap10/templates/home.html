@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+</head>
+<body>
+    <h1>Home Page</h1>
+    <table border="1" id="tbl1">
+        <tr>
+            <td>id</td>
+            <td>isim</td>
+            <td>soyisim</td>
+        </tr>
+        {% for x in mymembers %}
+        <tr>
+            <td>{{x.id}}</td>
+            <td>{{x.firstname}}</td>
+            <td>{{x.lastname}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href={% url 'second' %}>Add member</a>    
+</body>
+</html>
